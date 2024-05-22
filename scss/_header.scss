@@ -1,0 +1,182 @@
+@charset 'utf-8';
+@use './variables' as *;
+
+header {
+    display: grid;
+    grid-template: 0.4fr auto / auto;
+    width: 100%;
+    height: 25vh;
+
+
+    .header-container {
+        display: grid;
+        grid-template: auto 0.4fr / repeat(12, 1fr);
+        gap: 0 2%;
+        align-items: center;
+        grid-row: 1/2;
+        grid-column: 1;
+        margin: 0 2%;
+
+        p {
+            grid-row: 1;
+            grid-column: 1/3;
+            font-size: 12px;
+        }
+
+        .header-text-content {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            grid-row: 1;
+            grid-column: 6/9;
+
+
+            p {
+                padding: 0.5%;
+                font-size: 16px;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+
+        .header-phone-content {
+            display: grid;
+            grid-template: auto 0.3fr/ 0.3fr auto;
+            align-items: center;
+            grid-row: 2;
+            grid-column: 6/9;
+            // height: 100%;
+            // padding: 8% 10% 2%;
+
+
+            img {
+                grid-row: 2;
+                grid-column: 1;
+                width: 100%;
+                // width: clamp(1rem, 0.636rem + 1.82vw, 2rem);
+                // height: clamp(1rem, 0.636rem + 1.82vh, 2rem);
+            }
+
+            p {
+                grid-row: 1;
+                grid-column: 2;
+                font-size: 16px;
+            }
+
+            p:last-of-type {
+                grid-row: 2;
+                grid-column: 2;
+                font-size: clamp(0.7rem, 0.409rem + 1.45vw, 1.5rem);
+                color: $font-clr-bl;
+
+            }
+        }
+
+        a {
+            display: inline-block;
+            text-align: center;
+            padding: 0.5%;
+        }
+
+        .logo {
+            display: inline-block;
+            grid-row: 2;
+            grid-column: 1/5;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .btnbl {
+            grid-row: 1;
+            grid-column: 9/11;
+            background-color: $btn-clr-bl;
+            color: $font-clr-wt;
+            border: 2px solid #293499;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btnwt {
+            grid-row: 1;
+            grid-column: 11/13;
+            background-color: $btn-clr-wt;
+            color: $font-clr-bl;
+            border: 2px solid $font-clr-bl;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btnor {
+            display: block;
+            grid-row: 2;
+            grid-column: 9/13;
+            background-color: $btn-clr-or;
+            color: $font-clr-wt;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    nav {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: $logo-clr;
+        height: 100%;
+
+        .nav-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+            li {
+                a {
+                    color: $font-clr-wt;
+                    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+                }
+            }
+        }
+    }
+
+}
+
+.mvarea {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../img/メイン2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        width: 10%;
+    }
+
+    .mvtext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 15%);
+        width: 100%;
+        text-align: center;
+        text-shadow: 3px 6px 3px rgba(0, 0, 0, 0.4);
+
+        p {
+            color: $font-clr-wt;
+            font-size: clamp(1rem, 0.636rem + 1.82vw, 2rem);
+        }
+
+        h1 {
+            font-size: clamp(1rem, 0.091rem + 4.55vw, 3.5rem);
+        }
+    }
+}
