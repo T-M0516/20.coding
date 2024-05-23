@@ -540,8 +540,8 @@ header nav .nav-list li a {
   background-repeat: no-repeat;
   border: 3px solid #293499;
   height: 100%;
+  padding: 0 3%;
   margin: 0 auto;
-  width: 70%;
 }
 .banner p {
   font-weight: bold;
